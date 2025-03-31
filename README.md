@@ -5,6 +5,10 @@ Este servidor MCP (Message Control Protocol) permite a Claude Desktop interactua
 - Realizar peticiones de red
 - Conectarse y consultar bases de datos MySQL
 
+## Licencia
+
+Este proyecto está licenciado bajo la Licencia MIT - ver el archivo [LICENSE](LICENSE) para más detalles.
+
 ## Requisitos
 
 - Java 17 o superior
