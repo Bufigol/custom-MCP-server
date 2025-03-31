@@ -1,0 +1,24 @@
+# Archivos compilados
+target/
+*.class
+*.jar
+
+# Archivos de IDE
+.idea/
+.vscode/
+*.iml
+.project
+.classpath
+.settings/
+
+# Logs
+logs/
+*.log
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
+
+# Archivos de configuración local
+application-local.properties
+application-dev.properties 
