@@ -12,7 +12,7 @@ Nos tomamos la seguridad de Servidor MCP muy en serio. Si cree que ha encontrado
 
 **Por favor, no reporte vulnerabilidades de seguridad a través de issues públicos de GitHub.**
 
-En su lugar, por favor repórtelas por correo electrónico a [INSERTAR DIRECCIÓN DE CORREO]. Debería recibir una respuesta dentro de las 48 horas. Si por alguna razón no la recibe, por favor haga seguimiento por correo electrónico para asegurarse de que recibimos su mensaje original.
+En su lugar, por favor repórtelas mediante mensaje directo en BlueSkye a `bufigol.bsky.social`. Debería recibir una respuesta dentro de las 48 horas. Si por alguna razón no la recibe, por favor haga seguimiento para asegurarse de que recibimos su mensaje original.
 
 Por favor, incluya la información solicitada que se enumera a continuación (tanto como pueda proporcionar) para ayudarnos a entender mejor la naturaleza y el alcance del posible problema:
 
@@ -70,4 +70,4 @@ Lanzaremos actualizaciones de seguridad lo antes posible después de que se corr
 
 ## Contacto de Seguridad
 
-Si tiene alguna pregunta o preocupación relacionada con la seguridad, por favor contáctenos en [INSERTAR DIRECCIÓN DE CORREO]. 
+Si tiene alguna pregunta o preocupación relacionada con la seguridad, por favor contáctenos mediante mensaje directo en BlueSkye a `bufigol.bsky.social`. 

@@ -12,7 +12,7 @@ We take the security of Servidor MCP seriously. If you believe you have found a 
 
 **Please do not report security vulnerabilities through public GitHub issues.**
 
-Instead, please report them via email to [INSERT EMAIL ADDRESS]. You should receive a response within 48 hours. If for some reason you do not, please follow up via email to ensure we received your original message.
+Instead, please report them via direct message on BlueSkye at `bufigol.bsky.social`. You should receive a response within 48 hours. If for some reason you do not, please follow up to ensure we received your original message.
 
 Please include the requested information listed below (as much as you can provide) to help us better understand the nature and scope of the possible issue:
 
@@ -70,4 +70,4 @@ We will release security updates as soon as possible after a vulnerability is fi
 
 ## Security Contact
 
-If you have any security-related questions or concerns, please contact us at [INSERT EMAIL ADDRESS]. 
+If you have any security-related questions or concerns, please contact us via direct message on BlueSkye at `bufigol.bsky.social`. 

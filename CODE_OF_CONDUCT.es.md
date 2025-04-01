@@ -36,8 +36,7 @@ Este Pacto de Conducta se aplica dentro de todos los espacios de la comunidad, y
 
 ## Aplicación
 
-Los casos de comportamiento abusivo, acosador o inaceptable pueden ser reportados a los líderes de la comunidad responsables de la aplicación en [INSERTAR MÉTODO DE CONTACTO].
-Todas las quejas serán revisadas e investigadas de manera rápida y justa.
+Los casos de comportamiento abusivo, acosador o inaceptable pueden ser reportados a los líderes de la comunidad responsables de la aplicación mediante mensaje directo en BlueSkye a `bufigol.bsky.social`. Todas las quejas serán revisadas e investigadas de manera rápida y justa.
 
 Todos los líderes de la comunidad están obligados a respetar la privacidad y seguridad del denunciante de cualquier incidente.
 
@@ -77,4 +76,8 @@ Las Guías de Impacto en la Comunidad fueron inspiradas por [la escalera de apli
 
 [homepage]: https://www.contributor-covenant.org
 
-Para respuestas a preguntas comunes sobre este pacto de conducta, vea el FAQ en https://www.contributor-covenant.org/faq. Las traducciones están disponibles en https://www.contributor-covenant.org/translations. 
+Para respuestas a preguntas comunes sobre este pacto de conducta, vea el FAQ en https://www.contributor-covenant.org/faq. Las traducciones están disponibles en https://www.contributor-covenant.org/translations.
+
+## Contacto de Seguridad
+
+Si tienes alguna pregunta o preocupación relacionada con la seguridad, por favor contáctanos mediante mensaje directo en BlueSkye a `bufigol.bsky.social`. 
