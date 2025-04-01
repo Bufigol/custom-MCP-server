@@ -4,7 +4,6 @@ about: Crear un reporte para ayudarnos a mejorar
 title: '[ERROR] '
 labels: bug
 assignees: ''
-
 ---
 
 **Describe el error**
@@ -25,10 +24,11 @@ Una descripción clara y concisa de lo que esperabas que sucediera.
 Si corresponde, agrega capturas de pantalla para ayudar a explicar tu problema.
 
 **Entorno:**
- - Sistema Operativo: [ej. Windows 10]
- - Versión de Java: [ej. 17.0.1]
- - Versión de Maven: [ej. 3.8.4]
- - Versión de MySQL: [ej. 8.0.27]
+
+- Sistema Operativo: [ej. Windows 10]
+- Versión de Java: [ej. 17.0.1]
+- Versión de Maven: [ej. 3.8.4]
+- Versión de MySQL: [ej. 8.0.27]
 
 **Contexto adicional**
 Agrega cualquier otro contexto sobre el problema aquí.
@@ -37,4 +37,4 @@ Agrega cualquier otro contexto sobre el problema aquí.
 Si tienes alguna idea sobre cómo solucionar esto, por favor compártela.
 
 **Impacto**
-Describe el impacto que este error tiene en tu trabajo o en el sistema. 
+Describe el impacto que este error tiene en tu trabajo o en el sistema.
