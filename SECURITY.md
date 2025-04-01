@@ -70,4 +70,4 @@ We will release security updates as soon as possible after a vulnerability is fi
 
 ## Security Contact
 
-If you have any security-related questions or concerns, please contact us via direct message on BlueSkye at `bufigol.bsky.social`. 
+If you have any security-related questions or concerns, please contact us via direct message on BlueSkye at `bufigol.bsky.social`.

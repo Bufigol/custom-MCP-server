@@ -70,4 +70,4 @@ Lanzaremos actualizaciones de seguridad lo antes posible después de que se corr
 
 ## Contacto de Seguridad
 
-Si tiene alguna pregunta o preocupación relacionada con la seguridad, por favor contáctenos mediante mensaje directo en BlueSkye a `bufigol.bsky.social`. 
+Si tiene alguna pregunta o preocupación relacionada con la seguridad, por favor contáctenos mediante mensaje directo en BlueSkye a `bufigol.bsky.social`.

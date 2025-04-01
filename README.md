@@ -1,6 +1,7 @@
 # Servidor MCP para Claude Desktop
 
 Este servidor MCP (Message Control Protocol) permite a Claude Desktop interactuar con el sistema local, proporcionando capacidades para:
+
 - Leer y escribir archivos
 - Realizar peticiones de red
 - Conectarse y consultar bases de datos MySQL
@@ -17,7 +18,7 @@ Este proyecto está licenciado bajo la Licencia MIT - ver el archivo [LICENSE](L
 
 ## Estructura del Proyecto
 
-```
+```tree
 src/main/java/com/claude/mcp/
 ├── MCPServer.java           # Servidor principal que orquesta todos los servicios
 ├── model/
@@ -45,6 +46,7 @@ Los mensajes se intercambian en formato JSON con la siguiente estructura:
 ### Tipos de Mensajes
 
 1. **FILE_READ**
+
    ```json
    {
        "type": "FILE_READ",
@@ -55,6 +57,7 @@ Los mensajes se intercambian en formato JSON con la siguiente estructura:
    ```
 
 2. **FILE_WRITE**
+
    ```json
    {
        "type": "FILE_WRITE",
@@ -66,6 +69,7 @@ Los mensajes se intercambian en formato JSON con la siguiente estructura:
    ```
 
 3. **NETWORK_REQUEST**
+
    ```json
    {
        "type": "NETWORK_REQUEST",
@@ -78,6 +82,7 @@ Los mensajes se intercambian en formato JSON con la siguiente estructura:
    ```
 
 4. **DATABASE_QUERY**
+
    ```json
    {
        "type": "DATABASE_QUERY",
@@ -92,11 +97,13 @@ Los mensajes se intercambian en formato JSON con la siguiente estructura:
 ## Uso
 
 1. Compilar el proyecto:
+
    ```bash
    mvn clean package
    ```
 
 2. Ejecutar el servidor:
+
    ```bash
    java -jar target/servidor-mcp-1.0-SNAPSHOT.jar
    ```
@@ -111,4 +118,4 @@ Los mensajes se intercambian en formato JSON con la siguiente estructura:
 
 ## Logging
 
-El servidor utiliza SLF4J con Logback para el registro de eventos. Los logs se pueden configurar en `src/main/resources/logback.xml`. 
+El servidor utiliza SLF4J con Logback para el registro de eventos. Los logs se pueden configurar en `src/main/resources/logback.xml`.
