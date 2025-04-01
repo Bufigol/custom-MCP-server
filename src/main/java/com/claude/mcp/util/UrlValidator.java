@@ -21,12 +21,23 @@ public class UrlValidator {
     }
     
     public static boolean isValidUrl(String url) {
+        if (url == null || url.trim().isEmpty()) {
+            logger.warn("URL nula o vacía");
+            return false;
+        }
+        
         try {
             URI uri = new URI(url);
+            String scheme = uri.getScheme();
             
             // Validar protocolo
-            if (!ALLOWED_PROTOCOLS.contains(uri.getScheme().toLowerCase())) {
-                logger.warn("Protocolo no permitido: {}", uri.getScheme());
+            if (scheme == null) {
+                logger.warn("Protocolo no especificado en la URL: {}", url);
+                return false;
+            }
+            
+            if (!ALLOWED_PROTOCOLS.contains(scheme.toLowerCase())) {
+                logger.warn("Protocolo no permitido: {}", scheme);
                 return false;
             }
             
