@@ -126,4 +126,4 @@ For answers to common questions about this code of conduct, see the FAQ at
 ## Security Contact
 
 If you have any security-related questions or concerns, please contact us via direct message
-on BlueSkye at `bufigol.bsky.social`. 
+on BlueSkye at `bufigol.bsky.social`.

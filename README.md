@@ -1,49 +1,70 @@
-# Servidor MCP para Claude Desktop
+# 🚀 MCP Server for Autonomous Development Agents
 
-Este servidor MCP (Message Control Protocol) permite a Claude Desktop interactuar con el sistema local, proporcionando capacidades para:
+This MCP (Message Control Protocol) server is a platform that enables different AIs (like Claude) to act as autonomous development agents, providing capabilities to automate the entire software development process, from idea conception to final testing.
 
-- Leer y escribir archivos
-- Realizar peticiones de red
-- Conectarse y consultar bases de datos MySQL
+## 🎯 Main Objective
 
-## Licencia
+The main objective of this server is to enable AIs to develop software autonomously, performing tasks such as:
 
-Este proyecto está licenciado bajo la Licencia MIT - ver el archivo [LICENSE](LICENSE) para más detalles.
+- Project structure creation
+- Requirements file generation
+- Code development
+- Test implementation
+- Version control management
+- And any other software development related tasks
 
-## Requisitos
+## ✨ Main Features
 
-- Java 17 o superior
-- Maven 3.6 o superior
-- MySQL Server (opcional, solo si se planea usar la funcionalidad de base de datos)
+The server provides capabilities for:
 
-## Estructura del Proyecto
+- Reading and writing files
+- Making network requests
+- Connecting and querying MySQL databases
+- Executing system commands
+- Managing Git repositories
+- And more...
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 📋 Requirements
+
+- Java 17 or higher
+- Maven 3.6 or higher
+- MySQL Server (optional, only if database functionality is planned)
+- Git (for version control functionalities)
+
+## 📁 Project Structure
 
 ```tree
 src/main/java/com/claude/mcp/
-├── MCPServer.java           # Servidor principal que orquesta todos los servicios
+├── MCPServer.java           # Main server orchestrating all services
 ├── model/
-│   └── Message.java        # Modelo de mensajes para la comunicación
+│   └── Message.java        # Message model for communication
 └── service/
-    ├── FileService.java    # Servicio para operaciones de archivos
-    ├── DatabaseService.java # Servicio para operaciones de base de datos
-    └── NetworkService.java  # Servicio para operaciones de red
+    ├── FileService.java    # Service for file operations
+    ├── DatabaseService.java # Service for database operations
+    ├── NetworkService.java  # Service for network operations
+    ├── GitService.java      # Service for Git operations
+    └── CommandService.java  # Service for system command execution
 ```
 
-## Formato de Mensajes
+## 📝 Message Format
 
-Los mensajes se intercambian en formato JSON con la siguiente estructura:
+Messages are exchanged in JSON format with the following structure:
 
 ```json
 {
-    "type": "TIPO_MENSAJE",
-    "content": "contenido opcional",
+    "type": "MESSAGE_TYPE",
+    "content": "optional content",
     "parameters": {
-        // Parámetros específicos según el tipo de mensaje
+        // Specific parameters according to message type
     }
 }
 ```
 
-### Tipos de Mensajes
+### 📨 Message Types
 
 1. **FILE_READ**
 
@@ -51,7 +72,7 @@ Los mensajes se intercambian en formato JSON con la siguiente estructura:
    {
        "type": "FILE_READ",
        "parameters": {
-           "filePath": "/ruta/al/archivo.txt"
+           "filePath": "/path/to/file.txt"
        }
    }
    ```
@@ -62,8 +83,8 @@ Los mensajes se intercambian en formato JSON con la siguiente estructura:
    {
        "type": "FILE_WRITE",
        "parameters": {
-           "filePath": "/ruta/al/archivo.txt",
-           "content": "contenido a escribir"
+           "filePath": "/path/to/file.txt",
+           "content": "content to write"
        }
    }
    ```
@@ -74,9 +95,9 @@ Los mensajes se intercambian en formato JSON con la siguiente estructura:
    {
        "type": "NETWORK_REQUEST",
        "parameters": {
-           "url": "https://api.ejemplo.com",
+           "url": "https://api.example.com",
            "method": "GET",
-           "body": "{}"  // Opcional, solo para POST
+           "body": "{}"  // Optional, only for POST
        }
    }
    ```
@@ -88,34 +109,69 @@ Los mensajes se intercambian en formato JSON con la siguiente estructura:
        "type": "DATABASE_QUERY",
        "parameters": {
            "connectionId": "conn1",
-           "query": "SELECT * FROM tabla WHERE id = ?",
+           "query": "SELECT * FROM table WHERE id = ?",
            "queryParams": [1]
        }
    }
    ```
 
-## Uso
+5. **GIT_COMMAND**
 
-1. Compilar el proyecto:
+   ```json
+   {
+       "type": "GIT_COMMAND",
+       "parameters": {
+           "command": "commit",
+           "args": ["-m", "commit message"]
+       }
+   }
+   ```
+
+6. **SYSTEM_COMMAND**
+
+   ```json
+   {
+       "type": "SYSTEM_COMMAND",
+       "parameters": {
+           "command": "npm",
+           "args": ["install"]
+       }
+   }
+   ```
+
+## 🚀 Usage
+
+1. Build the project:
 
    ```bash
    mvn clean package
    ```
 
-2. Ejecutar el servidor:
+2. Run the server:
 
    ```bash
    java -jar target/servidor-mcp-1.0-SNAPSHOT.jar
    ```
 
-3. Conectar desde Claude Desktop usando el protocolo MCP.
+3. Connect from any AI compatible with the MCP protocol.
 
-## Seguridad
+## 🔒 Security
 
-- El servidor debe ejecutarse con los permisos mínimos necesarios
-- Se recomienda implementar autenticación antes de usar en producción
-- Las credenciales de base de datos deben manejarse de forma segura
+- The server should run with minimum necessary permissions
+- Authentication is recommended before using in production
+- Database credentials should be handled securely
+- System command limits and validations must be implemented
+- Using an isolated environment for testing is recommended
 
-## Logging
+## 📊 Logging
 
-El servidor utiliza SLF4J con Logback para el registro de eventos. Los logs se pueden configurar en `src/main/resources/logback.xml`.
+The server uses SLF4J with Logback for event logging. Logs can be configured in `src/main/resources/logback.xml`.
+
+## 🤝 Contributing
+
+Contributions are welcome. Please ensure to:
+
+1. Follow the project's style guidelines
+2. Include tests for new functionality
+3. Update documentation as needed
+4. Create an issue before starting major work

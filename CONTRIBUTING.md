@@ -108,4 +108,4 @@ This section lists the labels we use to help us track and manage issues and pull
 * `needs review`: Pull requests which need code review, and approval from maintainers or which need final testing
 * `under review`: Pull requests being reviewed by maintainers
 * `requires changes`: Pull requests which need to be updated based on review comments and then reviewed again
-* `needs testing`: Pull requests which need manual testing 
+* `needs testing`: Pull requests which need manual testing

@@ -28,4 +28,4 @@ Describe el impacto que esta característica tendría en el proyecto y sus usuar
 Por favor, indica la prioridad de esta solicitud de característica (Alta/Media/Baja).
 
 **Cronograma**
-Si tienes algún requisito o expectativa específica de tiempo, por favor menciónalos. 
+Si tienes algún requisito o expectativa específica de tiempo, por favor menciónalos.

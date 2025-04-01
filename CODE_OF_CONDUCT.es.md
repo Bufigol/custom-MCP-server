@@ -83,4 +83,4 @@ Para respuestas a preguntas comunes sobre este pacto de conducta, vea el FAQ en
 
 ## Contacto de Seguridad
 
-Si tienes alguna pregunta o preocupación relacionada con la seguridad, por favor contáctanos mediante mensaje directo en BlueSkye a `bufigol.bsky.social`. 
+Si tienes alguna pregunta o preocupación relacionada con la seguridad, por favor contáctanos mediante mensaje directo en BlueSkye a `bufigol.bsky.social`.
