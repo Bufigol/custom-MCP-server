@@ -96,8 +96,16 @@ Messages are exchanged in JSON format with the following structure:
        "type": "NETWORK_REQUEST",
        "parameters": {
            "url": "https://api.example.com",
-           "method": "GET",
-           "body": "{}"  // Optional, only for POST
+           "method": "GET|POST|PUT|DELETE|PATCH",
+           "body": "{}",  // Optional, for POST/PUT/PATCH
+           "contentType": "application/json",  // Optional
+           "headers": {  // Optional
+               "Custom-Header": "value"
+           },
+           "username": "user",  // Optional, for Basic Auth
+           "password": "pass",  // Optional, for Basic Auth
+           "token": "jwt-token",  // Optional, for Bearer Token Auth
+           "downloadFile": true  // Optional, to download file content
        }
    }
    ```

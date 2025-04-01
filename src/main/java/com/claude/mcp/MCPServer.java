@@ -1,16 +1,18 @@
 package com.claude.mcp;
 
+import java.io.IOException;
+import java.sql.SQLException;
+import java.util.Map;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import com.claude.mcp.model.Message;
 import com.claude.mcp.service.DatabaseService;
 import com.claude.mcp.service.FileService;
 import com.claude.mcp.service.NetworkService;
+import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
-import java.io.IOException;
-import java.sql.SQLException;
-import java.util.Map;
 
 public class MCPServer {
     private static final Logger logger = LoggerFactory.getLogger(MCPServer.class);
@@ -43,15 +45,36 @@ public class MCPServer {
             }
             
             return objectMapper.writeValueAsString(response);
-        } catch (Exception e) {
-            logger.error("Error procesando mensaje", e);
+        } catch (IOException e) {
+            logger.error("Error de entrada/salida al procesar mensaje", e);
             try {
                 Message errorResponse = new Message();
                 errorResponse.setType(Message.MessageType.ERROR);
-                errorResponse.setContent("Error procesando mensaje: " + e.getMessage());
+                errorResponse.setContent("Error de entrada/salida: " + e.getMessage());
                 return objectMapper.writeValueAsString(errorResponse);
             } catch (IOException ex) {
-                return "{\"type\":\"ERROR\",\"content\":\"Error interno del servidor\"}";
+                return "{\"type\":\"ERROR\",\"content\":\"Error interno del servidor al procesar respuesta\"}";
+            }
+        } catch (SQLException e) {
+            logger.error("Error de base de datos al procesar mensaje", e);
+            try {
+                Message errorResponse = new Message();
+                errorResponse.setType(Message.MessageType.ERROR);
+                errorResponse.setContent("Error de base de datos: " + e.getMessage());
+                return objectMapper.writeValueAsString(errorResponse);
+            } catch (IOException ex) {
+                return "{\"type\":\"ERROR\",\"content\":\"Error interno del servidor al procesar respuesta\"}";
+            }
+        } catch (InterruptedException e) {
+            logger.error("Operación interrumpida al procesar mensaje", e);
+            Thread.currentThread().interrupt(); // Restaurar el estado de interrupción
+            try {
+                Message errorResponse = new Message();
+                errorResponse.setType(Message.MessageType.ERROR);
+                errorResponse.setContent("Operación interrumpida: " + e.getMessage());
+                return objectMapper.writeValueAsString(errorResponse);
+            } catch (IOException ex) {
+                return "{\"type\":\"ERROR\",\"content\":\"Error interno del servidor al procesar respuesta\"}";
             }
         }
     }
@@ -87,11 +110,17 @@ public class MCPServer {
         response.setContent("Archivo escrito exitosamente");
     }
     
-    private void handleNetworkRequest(Message message, Message response) throws IOException, InterruptedException {
-        Map<String, String> params = (Map<String, String>) message.getParameters();
-        String url = params.get("url");
-        String method = params.get("method");
-        String body = params.get("body");
+    private void handleNetworkRequest(Message message, Message response) throws IOException, InterruptedException, JsonProcessingException {
+        Map<String, Object> params = (Map<String, Object>) message.getParameters();
+        String url = (String) params.get("url");
+        String method = (String) params.get("method");
+        String body = (String) params.get("body");
+        String contentType = (String) params.get("contentType");
+        Map<String, String> headers = (Map<String, String>) params.get("headers");
+        String username = (String) params.get("username");
+        String password = (String) params.get("password");
+        String token = (String) params.get("token");
+        Boolean downloadFile = (Boolean) params.get("downloadFile");
         
         if (url == null) {
             response.setType(Message.MessageType.ERROR);
@@ -100,21 +129,26 @@ public class MCPServer {
         }
         
         String result;
-        if ("GET".equalsIgnoreCase(method)) {
-            result = networkService.performHttpGet(url);
-        } else if ("POST".equalsIgnoreCase(method)) {
-            result = networkService.performHttpPost(url, body, "application/json");
-        } else {
-            response.setType(Message.MessageType.ERROR);
-            response.setContent("Método HTTP no soportado: " + method);
+        if (downloadFile != null && downloadFile) {
+            byte[] fileContent = networkService.downloadFile(url);
+            response.setType(Message.MessageType.RESPONSE);
+            response.setContent(java.util.Base64.getEncoder().encodeToString(fileContent));
             return;
+        }
+        
+        if (username != null && password != null) {
+            result = networkService.performHttpRequestWithAuth(url, method, body, headers, contentType, username, password);
+        } else if (token != null) {
+            result = networkService.performHttpRequestWithToken(url, method, body, headers, contentType, token);
+        } else {
+            result = networkService.performHttpRequest(url, method, body, headers, contentType);
         }
         
         response.setType(Message.MessageType.RESPONSE);
         response.setContent(result);
     }
     
-    private void handleDatabaseQuery(Message message, Message response) throws SQLException {
+    private void handleDatabaseQuery(Message message, Message response) throws SQLException, JsonProcessingException {
         Map<String, Object> params = (Map<String, Object>) message.getParameters();
         String connectionId = (String) params.get("connectionId");
         String query = (String) params.get("query");
