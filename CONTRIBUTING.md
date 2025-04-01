@@ -87,22 +87,22 @@ We use GitHub to host code, to track issues and feature requests, as well as acc
 
 This section lists the labels we use to help us track and manage issues and pull requests.
 
-**Type of Issue and Issue State**
+### Type of Issue and Issue State
 
-* `enhancement`: Feature requests
-* `bug`: Something isn't working
-* `documentation`: Improvements or additions to documentation
-* `good first issue`: Good for newcomers
-* `help wanted`: Extra attention is needed
-* `question`: Further information is requested
-* `wontfix`: This will not be worked on
-* `invalid`: This doesn't seem right
-* `duplicate`: This issue or pull request already exists
+- `enhancement`: Feature requests
+- `bug`: Something isn't working
+- `documentation`: Improvements or additions to documentation
+- `good first issue`: Good for newcomers
+- `help wanted`: Extra attention is needed
+- `question`: Further information is requested
+- `wontfix`: This will not be worked on
+- `invalid`: This doesn't seem right
+- `duplicate`: This issue or pull request already exists
 
-**Pull Request Labels**
+### Pull Request Labels
 
-* `work in progress`: Pull requests that are still being worked on, more changes will follow
-* `needs review`: Pull requests which need code review, and approval from maintainers or which need final testing
-* `under review`: Pull requests being reviewed by maintainers
-* `requires changes`: Pull requests which need to be updated based on review comments and then reviewed again
-* `needs testing`: Pull requests which need manual testing 
+- `work in progress`: Pull requests that are still being worked on, more changes will follow
+- `needs review`: Pull requests which need code review, and approval from maintainers or which need final testing
+- `under review`: Pull requests being reviewed by maintainers
+- `requires changes`: Pull requests which need to be updated based on review comments and then reviewed again
+- `needs testing`: Pull requests which need manual testing 

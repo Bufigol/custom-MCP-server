@@ -87,22 +87,22 @@ Usamos GitHub para alojar el código, rastrear issues y solicitudes de caracter�
 
 Esta sección lista las etiquetas que usamos para ayudarnos a rastrear y gestionar issues y pull requests.
 
-**Tipo de Issue y Estado del Issue**
+### Tipo de Issue y Estado del Issue
 
-* `enhancement`: Solicitudes de características
-* `bug`: Algo no está funcionando
-* `documentation`: Mejoras o adiciones a la documentación
-* `good first issue`: Bueno para principiantes
-* `help wanted`: Se necesita atención extra
-* `question`: Se solicita más información
-* `wontfix`: Esto no se trabajará
-* `invalid`: Esto no parece correcto
-* `duplicate`: Este issue o pull request ya existe
+- `enhancement`: Solicitudes de características
+- `bug`: Algo no está funcionando
+- `documentation`: Mejoras o adiciones a la documentación
+- `good first issue`: Bueno para principiantes
+- `help wanted`: Se necesita atención extra
+- `question`: Se solicita más información
+- `wontfix`: Esto no se trabajará
+- `invalid`: Esto no parece correcto
+- `duplicate`: Este issue o pull request ya existe
 
-**Etiquetas de Pull Request**
+### Etiquetas de Pull Request
 
-* `work in progress`: Pull requests que aún están en desarrollo, seguirán más cambios
-* `needs review`: Pull requests que necesitan revisión de código y aprobación de los mantenedores o que necesitan pruebas finales
-* `under review`: Pull requests siendo revisados por los mantenedores
-* `requires changes`: Pull requests que necesitan ser actualizados basados en comentarios de revisión y luego revisados nuevamente
-* `needs testing`: Pull requests que necesitan pruebas manuales 
+- `work in progress`: Pull requests que aún están en desarrollo, seguirán más cambios
+- `needs review`: Pull requests que necesitan revisión de código y aprobación de los mantenedores o que necesitan pruebas finales
+- `under review`: Pull requests siendo revisados por los mantenedores
+- `requires changes`: Pull requests que necesitan ser actualizados basados en comentarios de revisión y luego revisados nuevamente
+- `needs testing`: Pull requests que necesitan pruebas manuales 
