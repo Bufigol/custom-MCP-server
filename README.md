@@ -5,6 +5,7 @@ This MCP (Message Control Protocol) server is a platform that enables different 
 ## 🎯 Main Objective
 
 The main objective of this server is to enable AIs to develop software autonomously, performing tasks such as:
+
 - Project structure creation
 - Requirements file generation
 - Code development
@@ -15,6 +16,7 @@ The main objective of this server is to enable AIs to develop software autonomou
 ## ✨ Main Features
 
 The server provides capabilities for:
+
 - Reading and writing files
 - Making network requests
 - Connecting and querying MySQL databases
@@ -65,6 +67,7 @@ Messages are exchanged in JSON format with the following structure:
 ### 📨 Message Types
 
 1. **FILE_READ**
+
    ```json
    {
        "type": "FILE_READ",
@@ -75,6 +78,7 @@ Messages are exchanged in JSON format with the following structure:
    ```
 
 2. **FILE_WRITE**
+
    ```json
    {
        "type": "FILE_WRITE",
@@ -86,6 +90,7 @@ Messages are exchanged in JSON format with the following structure:
    ```
 
 3. **NETWORK_REQUEST**
+
    ```json
    {
        "type": "NETWORK_REQUEST",
@@ -98,6 +103,7 @@ Messages are exchanged in JSON format with the following structure:
    ```
 
 4. **DATABASE_QUERY**
+
    ```json
    {
        "type": "DATABASE_QUERY",
@@ -110,6 +116,7 @@ Messages are exchanged in JSON format with the following structure:
    ```
 
 5. **GIT_COMMAND**
+
    ```json
    {
        "type": "GIT_COMMAND",
@@ -121,6 +128,7 @@ Messages are exchanged in JSON format with the following structure:
    ```
 
 6. **SYSTEM_COMMAND**
+
    ```json
    {
        "type": "SYSTEM_COMMAND",
@@ -134,11 +142,13 @@ Messages are exchanged in JSON format with the following structure:
 ## 🚀 Usage
 
 1. Build the project:
+
    ```bash
    mvn clean package
    ```
 
 2. Run the server:
+
    ```bash
    java -jar target/servidor-mcp-1.0-SNAPSHOT.jar
    ```
@@ -160,6 +170,7 @@ The server uses SLF4J with Logback for event logging. Logs can be configured in 
 ## 🤝 Contributing
 
 Contributions are welcome. Please ensure to:
+
 1. Follow the project's style guidelines
 2. Include tests for new functionality
 3. Update documentation as needed

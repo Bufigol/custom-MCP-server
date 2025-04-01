@@ -1,11 +1,13 @@
 # Pull Request
 
 ## Descripción
+
 Por favor, incluye un resumen del cambio y qué issue se corrige. También incluye la motivación y el contexto relevantes.
 
 Corrige # (issue)
 
 ## Tipo de cambio
+
 Por favor, elimina las opciones que no son relevantes.
 
 - [ ] Corrección de error (cambio no destructivo que corrige un issue)
@@ -14,9 +16,11 @@ Por favor, elimina las opciones que no son relevantes.
 - [ ] Este cambio requiere una actualización de la documentación
 
 ## Cómo se ha probado
+
 Por favor, describe las pruebas que ejecutaste para verificar tus cambios. Proporciona instrucciones para que podamos reproducirlas.
 
 ## Lista de verificación
+
 - [ ] Mi código sigue las guías de estilo de este proyecto
 - [ ] He realizado una auto-revisión de mi propio código
 - [ ] He comentado mi código, particularmente en áreas difíciles de entender
@@ -27,6 +31,7 @@ Por favor, describe las pruebas que ejecutaste para verificar tus cambios. Propo
 - [ ] Cualquier cambio dependiente ha sido fusionado y publicado en módulos dependientes
 
 ## Contexto adicional
+
 Agrega cualquier otro contexto sobre el pull request aquí.
 
-## Capturas de pantalla (si corresponde): 
+## Capturas de pantalla (si corresponde)

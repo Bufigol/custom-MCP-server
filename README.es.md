@@ -5,6 +5,7 @@ Este servidor MCP (Message Control Protocol) es una plataforma que permite a dif
 ## 🎯 Objetivo Principal
 
 El objetivo principal de este servidor es permitir que las IAs puedan desarrollar software de manera autónoma, realizando tareas como:
+
 - Creación de estructura de proyectos
 - Generación de archivos de requisitos
 - Desarrollo de código
@@ -15,6 +16,7 @@ El objetivo principal de este servidor es permitir que las IAs puedan desarrolla
 ## ✨ Características Principales
 
 El servidor proporciona capacidades para:
+
 - Leer y escribir archivos
 - Realizar peticiones de red
 - Conectarse y consultar bases de datos MySQL
@@ -65,6 +67,7 @@ Los mensajes se intercambian en formato JSON con la siguiente estructura:
 ### 📨 Tipos de Mensajes
 
 1. **FILE_READ**
+
    ```json
    {
        "type": "FILE_READ",
@@ -75,6 +78,7 @@ Los mensajes se intercambian en formato JSON con la siguiente estructura:
    ```
 
 2. **FILE_WRITE**
+
    ```json
    {
        "type": "FILE_WRITE",
@@ -86,6 +90,7 @@ Los mensajes se intercambian en formato JSON con la siguiente estructura:
    ```
 
 3. **NETWORK_REQUEST**
+
    ```json
    {
        "type": "NETWORK_REQUEST",
@@ -98,6 +103,7 @@ Los mensajes se intercambian en formato JSON con la siguiente estructura:
    ```
 
 4. **DATABASE_QUERY**
+
    ```json
    {
        "type": "DATABASE_QUERY",
@@ -110,6 +116,7 @@ Los mensajes se intercambian en formato JSON con la siguiente estructura:
    ```
 
 5. **GIT_COMMAND**
+
    ```json
    {
        "type": "GIT_COMMAND",
@@ -121,6 +128,7 @@ Los mensajes se intercambian en formato JSON con la siguiente estructura:
    ```
 
 6. **SYSTEM_COMMAND**
+
    ```json
    {
        "type": "SYSTEM_COMMAND",
@@ -134,11 +142,13 @@ Los mensajes se intercambian en formato JSON con la siguiente estructura:
 ## 🚀 Uso
 
 1. Compilar el proyecto:
+
    ```bash
    mvn clean package
    ```
 
 2. Ejecutar el servidor:
+
    ```bash
    java -jar target/servidor-mcp-1.0-SNAPSHOT.jar
    ```
@@ -160,7 +170,8 @@ El servidor utiliza SLF4J con Logback para el registro de eventos. Los logs se p
 ## 🤝 Contribución
 
 Las contribuciones son bienvenidas. Por favor, asegúrate de:
+
 1. Seguir las guías de estilo del proyecto
 2. Incluir pruebas para nuevas funcionalidades
 3. Actualizar la documentación según sea necesario
-4. Crear un issue antes de comenzar trabajos mayores 
+4. Crear un issue antes de comenzar trabajos mayores
