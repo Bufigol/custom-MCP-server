@@ -59,17 +59,20 @@ We use GitHub to host code, to track issues and feature requests, as well as acc
 * Limit the first line to 72 characters or less
 * Reference issues and pull requests liberally after the first line
 * Consider starting the commit message with an applicable emoji:
-    * 🎨 `:art:` when improving the format/structure of the code
-    * 🐎 `:racehorse:` when improving performance
-    * 🚱 `:non-potable_water:` when plugging memory leaks
-    * 📝 `:memo:` when writing docs
-    * 🐛 `:bug:` when fixing a bug
-    * 🔥 `:fire:` when removing code or files
-    * 💚 `:green_heart:` when fixing the CI build
-    * ✅ `:white_check_mark:` when adding tests
-    * 🔒 `:lock:` when dealing with security
-    * ⬆️ `:arrow_up:` when upgrading dependencies
-    * ⬇️ `:arrow_down:` when downgrading dependencies
+
+### Posibles emojis for commit message
+
+* 🎨 `:art:` when improving the format/structure of the code
+* 🐎 `:racehorse:` when improving performance
+* 🚱 `:non-potable_water:` when plugging memory leaks
+* 📝 `:memo:` when writing docs
+* 🐛 `:bug:` when fixing a bug
+* 🔥 `:fire:` when removing code or files
+* 💚 `:green_heart:` when fixing the CI build
+* ✅ `:white_check_mark:` when adding tests
+* 🔒 `:lock:` when dealing with security
+* ⬆️ `:arrow_up:` when upgrading dependencies
+* ⬇️ `:arrow_down:` when downgrading dependencies
 
 ### Java Styleguide
 
@@ -87,7 +90,7 @@ We use GitHub to host code, to track issues and feature requests, as well as acc
 
 This section lists the labels we use to help us track and manage issues and pull requests.
 
-**Type of Issue and Issue State**
+### Type of Issue and Issue State
 
 * `enhancement`: Feature requests
 * `bug`: Something isn't working
@@ -99,7 +102,7 @@ This section lists the labels we use to help us track and manage issues and pull
 * `invalid`: This doesn't seem right
 * `duplicate`: This issue or pull request already exists
 
-**Pull Request Labels**
+### Pull Request Labels
 
 * `work in progress`: Pull requests that are still being worked on, more changes will follow
 * `needs review`: Pull requests which need code review, and approval from maintainers or which need final testing

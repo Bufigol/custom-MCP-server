@@ -1,3 +1,5 @@
+# Pull Request
+
 ## Descripción
 Por favor, incluye un resumen del cambio y qué issue se corrige. También incluye la motivación y el contexto relevantes.
 
@@ -11,10 +13,10 @@ Por favor, elimina las opciones que no son relevantes.
 - [ ] Cambio destructivo (corrección o característica que haría que la funcionalidad existente no funcione como se espera)
 - [ ] Este cambio requiere una actualización de la documentación
 
-## ¿Cómo se ha probado esto?
+## Cómo se ha probado
 Por favor, describe las pruebas que ejecutaste para verificar tus cambios. Proporciona instrucciones para que podamos reproducirlas.
 
-## Lista de verificación:
+## Lista de verificación
 - [ ] Mi código sigue las guías de estilo de este proyecto
 - [ ] He realizado una auto-revisión de mi propio código
 - [ ] He comentado mi código, particularmente en áreas difíciles de entender

@@ -4,7 +4,6 @@ about: Suggest an idea for this project
 title: '[FEATURE] '
 labels: enhancement
 assignees: ''
-
 ---
 
 **Is your feature request related to a problem? Please describe.**
@@ -29,4 +28,4 @@ Describe the impact this feature would have on the project and its users.
 Please indicate the priority of this feature request (High/Medium/Low).
 
 **Timeline**
-If you have any specific timeline requirements or expectations, please mention them. 
+If you have any specific timeline requirements or expectations, please mention them.

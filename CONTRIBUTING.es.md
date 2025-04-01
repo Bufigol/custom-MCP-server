@@ -59,17 +59,20 @@ Usamos GitHub para alojar el código, rastrear issues y solicitudes de caracter�
 * Limita la primera línea a 72 caracteres o menos
 * Referencia issues y pull requests libremente después de la primera línea
 * Considera comenzar el mensaje de commit con un emoji aplicable:
-    * 🎨 `:art:` cuando mejoras el formato/estructura del código
-    * 🐎 `:racehorse:` cuando mejoras el rendimiento
-    * 🚱 `:non-potable_water:` cuando corriges fugas de memoria
-    * 📝 `:memo:` cuando escribes documentación
-    * 🐛 `:bug:` cuando corriges un error
-    * 🔥 `:fire:` cuando eliminas código o archivos
-    * 💚 `:green_heart:` cuando corriges la compilación CI
-    * ✅ `:white_check_mark:` cuando agregas pruebas
-    * 🔒 `:lock:` cuando tratas con seguridad
-    * ⬆️ `:arrow_up:` cuando actualizas dependencias
-    * ⬇️ `:arrow_down:` cuando degradas dependencias
+
+### Posibles emojis para mensaje de commit
+
+* 🎨 `:art:` cuando mejoras el formato/estructura del código
+* 🐎 `:racehorse:` cuando mejoras el rendimiento
+* 🚱 `:non-potable_water:` cuando corriges fugas de memoria
+* 📝 `:memo:` cuando escribes documentación
+* 🐛 `:bug:` cuando corriges un error
+* 🔥 `:fire:` cuando eliminas código o archivos
+* 💚 `:green_heart:` cuando corriges la compilación CI
+* ✅ `:white_check_mark:` cuando agregas pruebas
+* 🔒 `:lock:` cuando tratas con seguridad
+* ⬆️ `:arrow_up:` cuando actualizas dependencias
+* ⬇️ `:arrow_down:` cuando degradas dependencias
 
 ### Guía de Estilo de Java
 
@@ -87,7 +90,7 @@ Usamos GitHub para alojar el código, rastrear issues y solicitudes de caracter�
 
 Esta sección lista las etiquetas que usamos para ayudarnos a rastrear y gestionar issues y pull requests.
 
-**Tipo de Issue y Estado del Issue**
+### Tipo de Issue y Estado del Issue
 
 * `enhancement`: Solicitudes de características
 * `bug`: Algo no está funcionando
@@ -99,7 +102,7 @@ Esta sección lista las etiquetas que usamos para ayudarnos a rastrear y gestion
 * `invalid`: Esto no parece correcto
 * `duplicate`: Este issue o pull request ya existe
 
-**Etiquetas de Pull Request**
+### Etiquetas de Pull Request
 
 * `work in progress`: Pull requests que aún están en desarrollo, seguirán más cambios
 * `needs review`: Pull requests que necesitan revisión de código y aprobación de los mantenedores o que necesitan pruebas finales

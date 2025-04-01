@@ -4,7 +4,6 @@ about: Sugiere una idea para este proyecto
 title: '[CARACTERÍSTICA] '
 labels: enhancement
 assignees: ''
-
 ---
 
 **¿Tu solicitud de característica está relacionada con un problema? Por favor, describe.**
