@@ -110,7 +110,7 @@ public class MCPServer {
         response.setContent("Archivo escrito exitosamente");
     }
     
-    private void handleNetworkRequest(Message message, Message response) throws IOException, InterruptedException, JsonProcessingException {
+    public void handleNetworkRequest(Message message, Message response) throws IOException, InterruptedException, JsonProcessingException {
         Map<String, Object> params = (Map<String, Object>) message.getParameters();
         String url = (String) params.get("url");
         String method = (String) params.get("method");
