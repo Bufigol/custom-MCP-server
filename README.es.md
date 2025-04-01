@@ -1,4 +1,4 @@
-# 🚀 Servidor MCP para Agentes Autónomos de Desarrollo
+# 🚀 Autonomous Dev Agent
 
 Este servidor MCP (Message Control Protocol) es una plataforma que permite a diferentes IAs (como Claude) actuar como agentes autónomos de desarrollo, proporcionando capacidades para automatizar todo el proceso de desarrollo de software, desde la concepción de la idea hasta el testeo final.
 
@@ -150,7 +150,7 @@ Los mensajes se intercambian en formato JSON con la siguiente estructura:
 2. Ejecutar el servidor:
 
    ```bash
-   java -jar target/servidor-mcp-1.0-SNAPSHOT.jar
+   java -jar target/autonomous-dev-agent-1.0-SNAPSHOT.jar
    ```
 
 3. Conectar desde cualquier IA compatible con el protocolo MCP.
