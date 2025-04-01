@@ -68,11 +68,12 @@ class NetworkServiceTest {
     }
     
     @Test
-    void testDownloadFile() throws IOException {
+    void testDownloadFile() throws IOException, InterruptedException {
         String url = "https://raw.githubusercontent.com/octocat/Hello-World/master/README.md";
-        String content = networkService.downloadFile(url);
+        byte[] content = networkService.downloadFile(url);
         assertNotNull(content);
-        assertTrue(content.contains("Hello World"));
+        String contentStr = new String(content, java.nio.charset.StandardCharsets.UTF_8);
+        assertTrue(contentStr.contains("Hello World"));
     }
     
     @Test
