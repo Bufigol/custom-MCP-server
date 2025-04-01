@@ -10,6 +10,7 @@ import java.util.Map;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import com.claude.mcp.util.UrlValidator;
 
 public class NetworkService {
     private static final Logger logger = LoggerFactory.getLogger(NetworkService.class);
@@ -29,6 +30,10 @@ public class NetworkService {
     
     public String performHttpRequest(String url, String method, String body, 
             Map<String, String> headers, String contentType) throws IOException, InterruptedException {
+        if (!UrlValidator.isValidUrl(url)) {
+            throw new IllegalArgumentException("URL no válida o no permitida: " + url);
+        }
+        
         logger.info("Realizando petición {} a: {}", method, url);
         
         HttpRequest.Builder requestBuilder = HttpRequest.newBuilder()
@@ -93,6 +98,10 @@ public class NetworkService {
     public String performHttpRequestWithAuth(String url, String method, String body, 
             Map<String, String> headers, String contentType, String username, String password) 
             throws IOException, InterruptedException {
+        if (!UrlValidator.isValidUrl(url)) {
+            throw new IllegalArgumentException("URL no válida o no permitida: " + url);
+        }
+        
         Map<String, String> authHeaders = Map.of(
             "Authorization", "Basic " + java.util.Base64.getEncoder()
                 .encodeToString((username + ":" + password).getBytes())
@@ -107,6 +116,10 @@ public class NetworkService {
     public String performHttpRequestWithToken(String url, String method, String body, 
             Map<String, String> headers, String contentType, String token) 
             throws IOException, InterruptedException {
+        if (!UrlValidator.isValidUrl(url)) {
+            throw new IllegalArgumentException("URL no válida o no permitida: " + url);
+        }
+        
         Map<String, String> authHeaders = Map.of(
             "Authorization", "Bearer " + token
         );
@@ -118,6 +131,10 @@ public class NetworkService {
     }
     
     public boolean isUrlAccessible(String url) {
+        if (!UrlValidator.isValidUrl(url)) {
+            return false;
+        }
+        
         try {
             HttpRequest request = HttpRequest.newBuilder()
                     .uri(URI.create(url))
@@ -133,6 +150,10 @@ public class NetworkService {
     }
     
     public byte[] downloadFile(String url) throws IOException, InterruptedException {
+        if (!UrlValidator.isValidUrl(url)) {
+            throw new IllegalArgumentException("URL no válida o no permitida: " + url);
+        }
+        
         logger.info("Descargando archivo de: {}", url);
         HttpRequest request = HttpRequest.newBuilder()
                 .uri(URI.create(url))

@@ -128,24 +128,29 @@ public class MCPServer {
             return;
         }
         
-        String result;
-        if (downloadFile != null && downloadFile) {
-            byte[] fileContent = networkService.downloadFile(url);
+        try {
+            String result;
+            if (downloadFile != null && downloadFile) {
+                byte[] fileContent = networkService.downloadFile(url);
+                response.setType(Message.MessageType.RESPONSE);
+                response.setContent(java.util.Base64.getEncoder().encodeToString(fileContent));
+                return;
+            }
+            
+            if (username != null && password != null) {
+                result = networkService.performHttpRequestWithAuth(url, method, body, headers, contentType, username, password);
+            } else if (token != null) {
+                result = networkService.performHttpRequestWithToken(url, method, body, headers, contentType, token);
+            } else {
+                result = networkService.performHttpRequest(url, method, body, headers, contentType);
+            }
+            
             response.setType(Message.MessageType.RESPONSE);
-            response.setContent(java.util.Base64.getEncoder().encodeToString(fileContent));
-            return;
+            response.setContent(result);
+        } catch (IllegalArgumentException e) {
+            response.setType(Message.MessageType.ERROR);
+            response.setContent("URL no válida o no permitida: " + e.getMessage());
         }
-        
-        if (username != null && password != null) {
-            result = networkService.performHttpRequestWithAuth(url, method, body, headers, contentType, username, password);
-        } else if (token != null) {
-            result = networkService.performHttpRequestWithToken(url, method, body, headers, contentType, token);
-        } else {
-            result = networkService.performHttpRequest(url, method, body, headers, contentType);
-        }
-        
-        response.setType(Message.MessageType.RESPONSE);
-        response.setContent(result);
     }
     
     private void handleDatabaseQuery(Message message, Message response) throws SQLException, JsonProcessingException {
