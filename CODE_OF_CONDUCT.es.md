@@ -70,13 +70,16 @@ Los líderes de la comunidad seguirán estas Guías de Impacto en la Comunidad p
 
 ## Atribución
 
-Este Pacto de Conducta está adaptado del [Contributor Covenant][homepage], versión 2.0, disponible en https://www.contributor-covenant.org/version/2/0/code_of_conduct.html.
+Este Pacto de Conducta está adaptado del [Contributor Covenant][homepage], versión 2.0,
+disponible en [https://www.contributor-covenant.org/version/2/0/code_of_conduct.html](https://www.contributor-covenant.org/version/2/0/code_of_conduct.html).
 
 Las Guías de Impacto en la Comunidad fueron inspiradas por [la escalera de aplicación del código de conducta de Mozilla](https://github.com/mozilla/diversity).
 
 [homepage]: https://www.contributor-covenant.org
 
-Para respuestas a preguntas comunes sobre este pacto de conducta, vea el FAQ en https://www.contributor-covenant.org/faq. Las traducciones están disponibles en https://www.contributor-covenant.org/translations.
+Para respuestas a preguntas comunes sobre este pacto de conducta, vea el FAQ en
+[https://www.contributor-covenant.org/faq](https://www.contributor-covenant.org/faq). Las traducciones están disponibles en
+[https://www.contributor-covenant.org/translations](https://www.contributor-covenant.org/translations).
 
 ## Contacto de Seguridad
 
